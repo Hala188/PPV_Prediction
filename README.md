@@ -25,7 +25,7 @@ Install the required libraries using pip:
 ```bash
 pip install pandas pycaret matplotlib seaborn openpyxl
 ```
-
+I cleaned and prepared the data even though PyCaret can handle some preprocessing automatically because proper data cleaning ensures better model performance and accuracy. It allows me to address issues like missing values, outliers, and incorrect data formats in a controlled and tailored manner, ensuring the data aligns with the specific requirements of my project. Additionally, cleaning the data beforehand helps me understand it better and avoid relying solely on automated preprocessing, which may not always align with the desired outcomes.
 ---
 
 ## Step-by-Step Process
@@ -39,6 +39,7 @@ import pandas as pd
 
 df = pd.read_excel('TG_T_CashValues_Rel.xlsx')
 ```
+Using Pandas to load the data instead of PyCaret's get_data is more flexible because Pandas supports various file formats like Excel, CSV, and JSON, while get_data is designed for built-in or pre-configured datasets. Pandas allows for better preprocessing and handling of custom datasets before feeding them into PyCaret.
 
 ### 2. Data Preprocessing
 
